@@ -38,7 +38,7 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<prefixes>
+shp-bv:
     sh:declare [
         sh:prefix "eli" ;
         sh:namespace "http://data.europa.eu/eli/ontology#"^^xsd:anyURI
@@ -54,39 +54,39 @@
     ] .
 
 target:VerslagTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli:Work; eli:work_type bv:Verslag }".
 
 target:AgendapuntTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli-dl:ForeseenActivity; eli:had_activity_type besluit:Agendapunt }".
 
 target:AgendaTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli:Work; eli:work_type <https://data.vlaanderen.be/doc/concept/BesluitDocumentType/13fefad6-a9d6-4025-83b5-e4cbee3a8965> }".
 
 target:AanleidingTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli:Work; eli:work_type bv:Aanleiding }".
 
 target:AgenderingTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli-dl:Activity; eli-dl:had_activity_type bv:Agendering }".
 
 target:BehandelingVanAgendapuntTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli-dl:Activity; eli:had_activity_type besluit:BehandelingVanAgendapunt }".
 
 target:BeslissingsactiviteitTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli-dl:Activity; eli:had_activity_type bv:Beslissingsactiviteit }".
 
 target:VergaderactiviteitTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli-dl:Activity; eli-dl:had_activity_type bv:Vergaderactiviteit }".
 
 target:ZittingTarget a sh:SPARQLTarget ;
-    sh:prefixes <prefixes> ;
+    sh:prefixes shp-bv: ;
     sh:select "SELECT ?this WHERE { ?this a eli-dl:Activity; eli-dl:had_activity_type besluit:Zitting }".
 
 
