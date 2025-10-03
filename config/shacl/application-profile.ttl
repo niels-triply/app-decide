@@ -660,6 +660,22 @@ shp-bv:StemmingShape a sh:NodeShape ;
             sh:minCount 1 ;
             sh:name "onderwerp" ;
             sh:path eli-dl:activity_label ] ;
+        [ sh:path eli-dl:had_voter_against ;
+            sh:description "Een mandataris die tegen stemde." ;
+            sh:class foaf:Person ;
+            sh:name "heeftTegenstander" ] ;
+        [ sh:path eli-dl:had_voter_favor ;
+            sh:description "Een mandataris die voor stemde." ;
+            sh:class foaf:Person ;d
+            sh:name "heeftVoorstander" ] ;
+        [ sh:path eli-dl:had_voter_abstention ;
+            sh:description "Een mandataris die zich van stemming heeft onthouden." ;
+            sh:class foaf:Person ;
+            sh:name "heeftOnthouder" ] ;
+        [ sh:path eli-dl:had_participation ;
+            sh:description "Een mandataris die aanwezig was bij de aanvang van de stemming." ;
+            sh:class foaf:Person ;
+            sh:name "heeftAanwezigeBijStart" ] ;
     sh:targetClass eli-dl:Vote .
 
 shp-bv:StukShape a sh:NodeShape ;
